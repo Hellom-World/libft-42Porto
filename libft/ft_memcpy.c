@@ -22,7 +22,8 @@ void *ft_memcpy(void *dst, const void *src, size_t n)
 
 
 
-	 //cometario pc-422
+	 //cometario pc-422 -- comentario pc-pessoal
+	
 	size_t	i;
 	
 
