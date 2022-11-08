@@ -6,11 +6,11 @@
 #    By: heolivei <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/05 13:15:43 by heolivei          #+#    #+#              #
-#    Updated: 2022/11/08 17:54:07 by heolivei         ###   ########.fr        #
+#    Updated: 2022/11/08 18:28:12 by heolivei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			=	ft_atoi.c ft_strlen.c
+SRCS			=	ft_atoi.c ft_strlen.c ft_memcpy.c
 OBJS			= $(SRCS:.c=.o)
 CC			= cc -c
 CFLAGS			= -Wall -Wextra -Werror -I
