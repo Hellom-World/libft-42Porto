@@ -6,7 +6,7 @@
 /*   By: heolivei <heolivei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 14:41:24 by heolivei          #+#    #+#             */
-/*   Updated: 2022/11/08 12:57:48 by heolivei         ###   ########.fr       */
+/*   Updated: 2022/11/08 13:03:28 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void *ft_memcpy(void *dst, const void *src, size_t n)
 
 
 
-	 //cometario pc-42
+	 //cometario pc-422
 	size_t	i;
 	
 
