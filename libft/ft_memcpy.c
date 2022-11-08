@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: heolivei <heolivei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 14:41:24 by heolivei          #+#    #+#             */
-/*   Updated: 2022/11/08 10:05:56 by heolivei         ###   ########.fr       */
+/*   Updated: 2022/11/08 12:57:48 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@ void *ft_memcpy(void *dst, const void *src, size_t n)
 {	
 	/* O tipo de variavel size_t eh uma variavel sem sinal de inteiro
 	 * ou seja, soh assume numeros positivos*/
+
+
+
+
+	 //cometario pc-42
 	size_t	i;
 	
 
