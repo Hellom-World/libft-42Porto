@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: heolivei <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: heolivei <heolivei@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/05 13:15:43 by heolivei          #+#    #+#              #
-#    Updated: 2022/11/08 18:28:12 by heolivei         ###   ########.fr        #
+#    Updated: 2022/11/08 20:26:15 by heolivei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS			=	ft_atoi.c ft_strlen.c ft_memcpy.c
 OBJS			= $(SRCS:.c=.o)
-CC			= cc -c
-CFLAGS			= -Wall -Wextra -Werror -I
+CC			= cc
+CFLAGS			= -Wall -Wextra -Werror
 LIBCR			= ar rcs
 RM			= rm -f
 
@@ -32,5 +32,5 @@ fclean:			clean
 re:			fclean all
 
 so:
-		$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+			$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
 			cc -nostartfiles -shared -o libft.so $(OBJS)
