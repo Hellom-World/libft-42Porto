@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: heolivei <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: heolivei <heolivei@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/05 13:15:43 by heolivei          #+#    #+#              #
-#    Updated: 2022/11/08 18:28:12 by heolivei         ###   ########.fr        #
+#    Updated: 2022/11/09 20:42:21 by heolivei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			=	ft_atoi.c ft_strlen.c ft_memcpy.c
+SRCS			=	ft_atoi.c ft_strlen.c ft_memcpy.c ft_isalpha.c ft_isdigit.c
 OBJS			= $(SRCS:.c=.o)
-CC			= cc -c
-CFLAGS			= -Wall -Wextra -Werror -I
+CC			= cc
+CFLAGS			= -Wall -Wextra -Werror
 LIBCR			= ar rcs
 RM			= rm -f
 
