@@ -3,12 +3,13 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: heolivei <heolivei@student.42.fr>          +#+  +:+       +#+         #
+#    By: heolivei <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/11/05 13:15:43 by heolivei          #+#    #+#              #
-#    Updated: 2022/11/09 20:42:21 by heolivei         ###   ########.fr        #
+#    Created: 2022/11/09 21:06:30 by heolivei          #+#    #+#              #
+#    Updated: 2022/11/09 21:06:35 by heolivei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 SRCS			=	ft_atoi.c ft_strlen.c ft_memcpy.c ft_isalpha.c ft_isdigit.c
 OBJS			= $(SRCS:.c=.o)
@@ -32,5 +33,5 @@ fclean:			clean
 re:			fclean all
 
 so:
-		$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+			$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
 			cc -nostartfiles -shared -o libft.so $(OBJS)
