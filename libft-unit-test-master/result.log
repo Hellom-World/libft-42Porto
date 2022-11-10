@@ -1,42 +1,14 @@
-ft_memset:     
-ft_bzero:      [MISSING]
-ft_memcpy:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
-ft_memmove:    [MISSING]
-ft_memchr:     [MISSING]
-ft_memcmp:     [MISSING]
-ft_strlen:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
-ft_isalpha:    [OK] 
-ft_isdigit:    [OK] 
-ft_isalnum:    [OK] 
-ft_isascii:    [OK] 
-ft_isprint:    [MISSING]
-ft_toupper:    [MISSING]
-ft_tolower:    [MISSING]
-ft_strchr:     [MISSING]
-ft_strrchr:    [MISSING]
-ft_strncmp:    [MISSING]
-ft_strlcpy:    [MISSING]
-ft_strlcat:    [MISSING]
-ft_strnstr:    [MISSING]
-ft_atoi:       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
-ft_calloc:     [MISSING]
-ft_strdup:     [MISSING]
-ft_substr:     [MISSING]
-ft_strjoin:    [MISSING]
-ft_strtrim:    [MISSING]
-ft_split:      [MISSING]
-ft_itoa:       [MISSING]
-ft_strmapi:    [MISSING]
-ft_putchar_fd: [MISSING]
-ft_putstr_fd:  [MISSING]
-ft_putendl_fd: [MISSING]
-ft_putnbr_fd:  [MISSING]
-ft_lstnew:     [MISSING]
-ft_lstadd_front: [MISSING]
-ft_lstsize:    [MISSING]
-ft_lstlast:    [MISSING]
-ft_lstadd_back:[MISSING]
-ft_lstdelone:  [MISSING]
-ft_lstclear:   [MISSING]
-ft_lstiter:    [MISSING]
-ft_lstmap:     [MISSING]
+ft_memset: x23.43 slower than system's function (50717 cpu ticks vs 1188538)
+ft_memset: x143.88 slower than system's function (16499 cpu ticks vs 2373831)
+ft_memset: x19.84 slower than system's function (29337 cpu ticks vs 582108)
+
+ft_memcpy: x16.20 slower than system's function (49085 cpu ticks vs 795367)
+ft_memcpy: x100.43 slower than system's function (15662 cpu ticks vs 1572986)
+ft_memcpy: x51.86 slower than system's function (29347 cpu ticks vs 1521839)
+
+ft_strlen: x39.23 slower than system's function (92633 cpu ticks vs 3633722)
+ft_strlen: x231.51 slower than system's function (63382 cpu ticks vs 14673519)
+ft_strlen: x74.35 slower than system's function (22571 cpu ticks vs 1678203)
+
+ft_atoi: x1.34 slower than system's function (314884 cpu ticks vs 422017)
+
