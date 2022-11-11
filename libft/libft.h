@@ -6,7 +6,7 @@
 /*   By: heolivei <heolivei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 14:43:48 by heolivei          #+#    #+#             */
-/*   Updated: 2022/11/10 18:56:02 by heolivei         ###   ########.fr       */
+/*   Updated: 2022/11/11 18:22:24 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ int		ft_isascii(int c);
 
 void	*ft_memset(void *str, int c, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
+void	ft_bzero(void *s, size_t n);
 
 #endif
