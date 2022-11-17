@@ -17,7 +17,7 @@ SRCS			=	ft_atoi.c ft_strlen.c ft_memcpy.c ft_isalpha.c \
 OBJS			= $(SRCS:.c=.o)
 CC			= cc
 CFLAGS			= -Wall -Wextra -Werror
-LIBCR			= ar rcs
+LIBCR			= ar rc
 RM			= rm -f
 
 NAME			= libft.a
@@ -34,6 +34,6 @@ fclean:			clean
 
 re:			fclean all
 
-so:
+so:	
 			$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-			cc -nostartfiles -shared -o libft.so $(OBJS)
+			gcc -nostartfiles -shared -o libft.so $(OBJS)
