@@ -1,15 +1,32 @@
-ft_memset:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memset:     [OK] [TIMEOUT] [OK] [OK] [OK] [OK] [OK] Test code:
+	const int size = 18;
+	char b1[0xF00];
+
+	memset(b1, 'B', 0xF00);
+	char *r1 = memset(b1, 'A', size);
+	char *r2 = ft_memset(b1, 'A', size);
+	for (register int __i = 0; __i < size; ++__i)
+	for (register int __i = 0; __i < size; ++__i)
+	if (r1 != r2)
+		exit(TEST_FAILED);
+	r1 = memset("", 'A', (0));
+	r2 = ft_memset("", 'A', 0);
+	if (r1 != r2)
+		exit(TEST_FAILED);
+	exit(TEST_SUCCESS);
+
+
 ft_bzero:      [OK] [OK] [OK] [OK] 
 ft_memcpy:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_memmove:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_memchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
-ft_memcmp:     [MISSING]
+ft_memcmp:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_strlen:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_isalpha:    [OK] 
 ft_isdigit:    [OK] 
 ft_isalnum:    [OK] 
 ft_isascii:    [OK] 
-ft_isprint:    [MISSING]
+ft_isprint:    [OK] 
 ft_toupper:    [MISSING]
 ft_tolower:    [MISSING]
 ft_strchr:     [MISSING]
