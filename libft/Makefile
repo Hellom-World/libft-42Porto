@@ -6,14 +6,15 @@
 #    By: heolivei <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/09 21:06:30 by heolivei          #+#    #+#              #
-#    Updated: 2022/11/16 14:55:36 by heolivei         ###   ########.fr        #
+#    Updated: 2022/11/17 14:48:55 by heolivei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 SRCS			=	ft_atoi.c ft_strlen.c ft_memcpy.c ft_isalpha.c \
 				ft_isdigit.c ft_isalnum.c ft_isascii.c ft_memset.c \
-				ft_bzero.c ft_memmove.c ft_memchr.c ft_memcmp.c
+				ft_bzero.c ft_memmove.c ft_memchr.c ft_memcmp.c \
+				ft_isprint.c
 OBJS			= $(SRCS:.c=.o)
 CC			= cc
 CFLAGS			= -Wall -Wextra -Werror
