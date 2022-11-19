@@ -1,7 +1,18 @@
 ft_memset:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_bzero:      [OK] [OK] [OK] [OK] 
 ft_memcpy:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
-ft_memmove:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memmove:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [TIMEOUT] [OK] [OK] [OK] [OK] [OK] [OK] Test code:
+	int size = 128 * 1024 * 1024;
+	char *dst = (char *)malloc(sizeof(char) * size);
+	char *data = (char *)malloc(sizeof(char) * size);
+
+	memset(data, 'A', size);
+	if (!dst)
+		exit(TEST_INVISIBLE);
+	ft_memmove(dst, data, size);
+	exit(TEST_SUCCESS);
+
+
 ft_memchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_memcmp:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_strlen:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
@@ -15,57 +26,7 @@ ft_tolower:    [OK]
 ft_strchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_strrchr:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_strncmp:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
-ft_strlcpy:    [OK] [OK] [OK] [FAILED] [OK] [FAILED] [NO CRASH] 
-[fail]: your strlcpy does works whe size < strlen(src)
-Test code:
-	char *str = "hello !";
-	char buff1[0xF00];
-	char buff2[0xF00];
-	size_t r1;
-	size_t r2;
-
-	memset(buff1, 'A', 20);
-	memset(buff2, 'A', 20);
-	r1 = strlcpy(buff1, str, 2);
-	r2 = ft_strlcpy(buff2, str, 2);
-	if (r1 == r2 && !memcmp(buff1, buff2, 20))
-		exit(TEST_SUCCESS);
-	if (r1 != r2)
-	{
-	}
-		for (register int __i = 0; __i < 20; ++__i)
-		for (register int __i = 0; __i < 20; ++__i)
-	}
-	exit(TEST_FAILED);
-
-Diffs:
-     strlcpy: |7|
-  ft_strlcpy: |2|
-
-[fail]: your strlcpy copies while destsize is zero, or does not return the size of the string it tried to create
-Test code:
-	char *str = "BBBB";
-	char buff1[0xF00];
-	char buff2[0xF00];
-
-	memset(buff1, 'A', 20);
-	memset(buff2, 'A', 20);
-	if (strlcpy(buff1, str, 0) != ft_strlcpy(buff2, str, 0))
-		exit(TEST_FAILED);
-	if (!memcmp(buff1, buff2, 20))
-		exit(TEST_SUCCESS);
-	for (register int __i = 0; __i < 20; ++__i)
-	for (register int __i = 0; __i < 20; ++__i)
-	exit(TEST_FAILED);
-
-Diffs:
-
-
-[no crash]: your strlcpy doe not segfault when null parameter is sent
-Test code:
-	ft_strlcpy(((void*)0), ((void*)0), 10);
-
-
+ft_strlcpy:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_strlcat:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_strnstr:    [MISSING]
 ft_atoi:       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
