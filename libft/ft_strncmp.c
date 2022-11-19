@@ -6,7 +6,7 @@
 /*   By: heolivei <heolivei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 17:20:23 by heolivei          #+#    #+#             */
-/*   Updated: 2022/11/08 18:54:36 by heolivei         ###   ########.fr       */
+/*   Updated: 2022/11/19 10:46:04 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,9 @@ int	cmp_char(char c1, char c2)
 {
 	unsigned char	ucc1;
 	unsigned char	ucc2;	
-	
+
 	ucc1 = (unsigned char)c1;
 	ucc2 = (unsigned char)c2;
-
 	if (ucc1 != ucc2)
 		return (ucc1 - ucc2);
 	return (0);
