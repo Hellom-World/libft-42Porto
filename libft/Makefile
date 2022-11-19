@@ -6,7 +6,7 @@
 #    By: heolivei <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/09 21:06:30 by heolivei          #+#    #+#              #
-#    Updated: 2022/11/17 14:48:55 by heolivei         ###   ########.fr        #
+#    Updated: 2022/11/19 14:05:18 by heolivei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ SRCS			=	ft_atoi.c ft_strlen.c ft_memcpy.c ft_isalpha.c \
 				ft_isdigit.c ft_isalnum.c ft_isascii.c ft_memset.c \
 				ft_bzero.c ft_memmove.c ft_memchr.c ft_memcmp.c \
 				ft_isprint.c ft_toupper.c ft_tolower.c ft_strchr.c \
-			       	ft_strrchr.c ft_strncmp.c ft_strlcat
+			       	ft_strrchr.c ft_strncmp.c ft_strlcat.c ft_strlcpy.c
 OBJS			= $(SRCS:.c=.o)
 CC			= cc
 CFLAGS			= -Wall -Wextra -Werror

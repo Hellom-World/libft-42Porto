@@ -6,7 +6,7 @@
 /*   By: heolivei <heolivei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 14:43:48 by heolivei          #+#    #+#             */
-/*   Updated: 2022/11/19 10:53:44 by heolivei         ###   ########.fr       */
+/*   Updated: 2022/11/19 14:04:56 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 int		ft_atoi(char *str);
 int		ft_isalpha(int c);

@@ -15,8 +15,58 @@ ft_tolower:    [OK]
 ft_strchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_strrchr:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_strncmp:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
-ft_strlcpy:    [MISSING]
-ft_strlcat:    [MISSING]
+ft_strlcpy:    [OK] [OK] [OK] [FAILED] [OK] [FAILED] [NO CRASH] 
+[fail]: your strlcpy does works whe size < strlen(src)
+Test code:
+	char *str = "hello !";
+	char buff1[0xF00];
+	char buff2[0xF00];
+	size_t r1;
+	size_t r2;
+
+	memset(buff1, 'A', 20);
+	memset(buff2, 'A', 20);
+	r1 = strlcpy(buff1, str, 2);
+	r2 = ft_strlcpy(buff2, str, 2);
+	if (r1 == r2 && !memcmp(buff1, buff2, 20))
+		exit(TEST_SUCCESS);
+	if (r1 != r2)
+	{
+	}
+		for (register int __i = 0; __i < 20; ++__i)
+		for (register int __i = 0; __i < 20; ++__i)
+	}
+	exit(TEST_FAILED);
+
+Diffs:
+     strlcpy: |7|
+  ft_strlcpy: |2|
+
+[fail]: your strlcpy copies while destsize is zero, or does not return the size of the string it tried to create
+Test code:
+	char *str = "BBBB";
+	char buff1[0xF00];
+	char buff2[0xF00];
+
+	memset(buff1, 'A', 20);
+	memset(buff2, 'A', 20);
+	if (strlcpy(buff1, str, 0) != ft_strlcpy(buff2, str, 0))
+		exit(TEST_FAILED);
+	if (!memcmp(buff1, buff2, 20))
+		exit(TEST_SUCCESS);
+	for (register int __i = 0; __i < 20; ++__i)
+	for (register int __i = 0; __i < 20; ++__i)
+	exit(TEST_FAILED);
+
+Diffs:
+
+
+[no crash]: your strlcpy doe not segfault when null parameter is sent
+Test code:
+	ft_strlcpy(((void*)0), ((void*)0), 10);
+
+
+ft_strlcat:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_strnstr:    [MISSING]
 ft_atoi:       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_calloc:     [MISSING]
