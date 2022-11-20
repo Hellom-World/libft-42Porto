@@ -1,39 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 09:03:26 by heolivei          #+#    #+#             */
-/*   Updated: 2022/11/20 09:19:43 by heolivei         ###   ########.fr       */
+/*   Created: 2022/11/20 11:42:49 by heolivei          #+#    #+#             */
+/*   Updated: 2022/11/20 13:10:49 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *pizza, const char *slice, size_t len)
+char	*ft_strdup(const char *s)
 {
-	size_t	p;
-	size_t	s;
+	char	*str;
+	size_t	i;
 
-	p = 0;
-	if ((!pizza || !slice) && len == 0)
+	str = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
+	i = 0;
+	if (str == 0)
 		return (0);
-	if (slice[0] == '\0')
-		return ((char *)pizza);
-	while (pizza[p] != '\0')
+	while (s[i])
 	{
-		s = 0;
-		while (pizza[p + s] == slice[s] && (p + s) < len)
-		{
-			if (pizza[p + s] == '\0' && slice[s] == '\0')
-				return ((char *)&pizza[p]);
-			s++;
-		}
-		if (slice[s] == '\0')
-			return ((char *)pizza + p);
-		p++;
+		str[i] = s[i];
+		i++;
 	}
-	return (0);
+	str[i] = '\0';
+	return (str);
 }

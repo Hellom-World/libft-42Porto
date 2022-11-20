@@ -1,39 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 09:03:26 by heolivei          #+#    #+#             */
-/*   Updated: 2022/11/20 09:19:43 by heolivei         ###   ########.fr       */
+/*   Created: 2022/11/20 14:25:00 by heolivei          #+#    #+#             */
+/*   Updated: 2022/11/20 16:26:36 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *pizza, const char *slice, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	p;
-	size_t	s;
+	char	*str;
+	size_t	i;
+	size_t	k;
 
-	p = 0;
-	if ((!pizza || !slice) && len == 0)
+	i = 0;
+	k = 0;
+	if (!s1 || !s2)
 		return (0);
-	if (slice[0] == '\0')
-		return ((char *)pizza);
-	while (pizza[p] != '\0')
-	{
-		s = 0;
-		while (pizza[p + s] == slice[s] && (p + s) < len)
-		{
-			if (pizza[p + s] == '\0' && slice[s] == '\0')
-				return ((char *)&pizza[p]);
-			s++;
-		}
-		if (slice[s] == '\0')
-			return ((char *)pizza + p);
-		p++;
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!str)
+		return (0);
+	while (s1[i] != '\0')
+	{	
+		str[i] = s1[i];
+		i++;
 	}
-	return (0);
+	while (s2[k] != '\0')
+	{
+		str[i + k] = s2[k];
+		k++;
+	}
+	str[k + i] = '\0';
+	return (str);
 }
