@@ -1,18 +1,7 @@
 ft_memset:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_bzero:      [OK] [OK] [OK] [OK] 
 ft_memcpy:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
-ft_memmove:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [TIMEOUT] [OK] [OK] [OK] [OK] [OK] [OK] Test code:
-	int size = 128 * 1024 * 1024;
-	char *dst = (char *)malloc(sizeof(char) * size);
-	char *data = (char *)malloc(sizeof(char) * size);
-
-	memset(data, 'A', size);
-	if (!dst)
-		exit(TEST_INVISIBLE);
-	ft_memmove(dst, data, size);
-	exit(TEST_SUCCESS);
-
-
+ft_memmove:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_memchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_memcmp:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_strlen:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 

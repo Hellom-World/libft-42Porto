@@ -6,7 +6,7 @@
 /*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 18:13:34 by heolivei          #+#    #+#             */
-/*   Updated: 2022/11/20 18:31:32 by heolivei         ###   ########.fr       */
+/*   Updated: 2022/11/23 14:04:26 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ static size_t	ft_tocut(const char *s, char c)
 	size_t	cut;
 
 	cut = 0;
-
 	while (*s)
 	{
 		if (*s != c)
@@ -37,7 +36,7 @@ char	**ft_split(char const *s, char c)
 	char	**split;
 	size_t	i;
 	size_t	len;
-	
+
 	i = 0;
 	if (!s)
 		return (0);
