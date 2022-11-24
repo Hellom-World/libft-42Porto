@@ -6,7 +6,7 @@
 /*   By: heolivei <heolivei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 14:43:48 by heolivei          #+#    #+#             */
-/*   Updated: 2022/11/20 17:54:21 by heolivei         ###   ########.fr       */
+/*   Updated: 2022/11/24 14:07:08 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 void	*ft_memset(void *str, int c, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
