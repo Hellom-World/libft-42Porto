@@ -6,7 +6,7 @@
 #    By: heolivei <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/09 21:06:30 by heolivei          #+#    #+#              #
-#    Updated: 2022/11/27 14:01:18 by heolivei         ###   ########.fr        #
+#    Updated: 2022/11/28 13:31:37 by heolivei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,9 +21,10 @@ SRCS			=	ft_atoi.c ft_strlen.c ft_memcpy.c ft_isalpha.c \
 				ft_strmapi.c ft_putchar_fd.c ft_striteri.c ft_putstr_fd.c \
 				ft_putnbr_fd.c ft_putendl_fd.c
 
-SRCS_BONUS 		=	ft_lsnew_bonus.c
+SRCS_BONUS 		=	ft_lstnew.c
 
 OBJS			= $(SRCS:.c=.o)
+BONUS_OBJS		= $(SRCS_BONUS:.c=.o)
 CC			= cc
 CFLAGS			= -Wall -Wextra -Werror
 LIBCR			= ar rc
@@ -36,16 +37,16 @@ all:			$(NAME)
 $(NAME):	$(OBJS) 
 			$(LIBCR) $(NAME) $(OBJS)
 
-bonus:		$(NAME) $(OBJ_BONUS)
-			
+bonus:		$(OBJS) $(BONUS_OBJS)
+			$(LIBCR) $(NAME) $(OBJS) $(BONUS_OBJS)
 
 clean:
-			$(RM) $(OBJS)
+			$(RM) $(OBJS) $(BONUS_OBJS)
 fclean:			clean
 			$(RM) $(NAME)
 
 re:			fclean all
 
 so:	
-			$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-			gcc -nostartfiles -shared -o libft.so $(OBJS)
+			$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(SRCS_BONUS)
+			gcc -nostartfiles -shared -o libft.so $(OBJS) $(BONUS_OBJS)
