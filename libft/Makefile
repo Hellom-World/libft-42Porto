@@ -6,7 +6,7 @@
 #    By: heolivei <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/09 21:06:30 by heolivei          #+#    #+#              #
-#    Updated: 2022/11/24 14:08:14 by heolivei         ###   ########.fr        #
+#    Updated: 2022/11/27 14:01:18 by heolivei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,11 @@ SRCS			=	ft_atoi.c ft_strlen.c ft_memcpy.c ft_isalpha.c \
 			       	ft_strrchr.c ft_strncmp.c ft_strlcat.c ft_strlcpy.c \
 				ft_strnstr.c ft_calloc.c ft_strdup.c ft_substr.c \
 				ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c \
-				ft_strmapi.c
+				ft_strmapi.c ft_putchar_fd.c ft_striteri.c ft_putstr_fd.c \
+				ft_putnbr_fd.c ft_putendl_fd.c
+
+SRCS_BONUS 		=	ft_lsnew_bonus.c
+
 OBJS			= $(SRCS:.c=.o)
 CC			= cc
 CFLAGS			= -Wall -Wextra -Werror
@@ -31,6 +35,9 @@ all:			$(NAME)
 
 $(NAME):	$(OBJS) 
 			$(LIBCR) $(NAME) $(OBJS)
+
+bonus:		$(NAME) $(OBJ_BONUS)
+			
 
 clean:
 			$(RM) $(OBJS)
