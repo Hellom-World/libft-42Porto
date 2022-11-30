@@ -6,7 +6,7 @@
 #    By: heolivei <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/09 21:06:30 by heolivei          #+#    #+#              #
-#    Updated: 2022/11/28 13:31:37 by heolivei         ###   ########.fr        #
+#    Updated: 2022/11/30 14:47:24 by heolivei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS			=	ft_atoi.c ft_strlen.c ft_memcpy.c ft_isalpha.c \
 				ft_putnbr_fd.c ft_putendl_fd.c
 
 SRCS_BONUS 		=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-				ft_lstadd_back.c
+				ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c
 
 OBJS			= $(SRCS:.c=.o)
 BONUS_OBJS		= $(SRCS_BONUS:.c=.o)

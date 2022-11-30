@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/30 09:54:57 by heolivei          #+#    #+#             */
-/*   Updated: 2022/11/30 09:55:26 by heolivei         ###   ########.fr       */
+/*   Created: 2022/11/30 11:18:20 by heolivei          #+#    #+#             */
+/*   Updated: 2022/11/30 11:49:47 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	t_list	*lstcpy;
-
-	lstcpy = lst;
-	if (!lst)
-		return (0);
-	while (lstcpy->next != NULL)
-			lstcpy = lstcpy->next;
-	return (lstcpy);
+	if (!del)
+		return ;
+	if (lst)
+	{
+		(*del)(lst->content);
+		free(lst);
+	}
 }
